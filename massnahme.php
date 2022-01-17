@@ -3,8 +3,8 @@
 	
 	$post_set = $_POST?1:0;
 	
-	$search_query = (isset($_POST["massnahme_search"])) ? $_POST["massnahme_search"] : "" ;
-	
+	$search_query = (isset($_POST["massnahme_search"])) ? $_POST["massnahme_search"] : NULL;
+
 
 	$resources = (isset($_POST["resourceform"])) ? $_POST["resourceform"] : "" ;
 	$funcs = (isset($_POST["functionsform"])) ? $_POST["functionsform"] : "" ;
