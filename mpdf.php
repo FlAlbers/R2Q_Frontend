@@ -592,13 +592,16 @@ if($sumLength != 0)
     {
         if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]!="" ) {
             if ($i == $first) {
+                // $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
+                // <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i][1]) . "</td>";
+                // $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table></div>";
                 $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
-                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i][1]) . "</td>";
-                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table></div>";
+                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
+                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table></div>";
             } else {
                 $html4 = $html4 . "<table class='resTable'  style='border-top: 1px solid gray;'>
-                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i][1]) . "</td>";
-                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table>";
+                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
+                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table>";
             }
         } else {
             $first = $first + 1;
