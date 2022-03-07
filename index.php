@@ -22,20 +22,19 @@ include 'parsedown-1.7.4/Parsedown.php';
 <div class="mySlides fade">
     <!-- <div class="numbertext">1 / 3</div> -->
     <img class="LogoIntro" src="R2Q_Logo.png">
-    <p style="text-align: justify">
-        Platzhalter Einleitung:
-        <br>
-        Das Verbundprojekt R2Q - RessourcenPlan im Quartier - verfolgt das Ziel, die Verwendung der Ressourcen Wasser, 
-        Stoffe, Energie und Fläche/Raum im Quartier zu untersuchen. 
-        Aus den gewonnenen Erkenntnissen ist ein Katalog entstanden, der Maßnahmen vorstellt, die ein effizientes Bewirtschaften dieser Ressourcen ermöglicht.
+    <p style="text-align: center">
+        Das Verbundprojekt R2Q - RessourcenPlan im Quartier - verfolgt das Ziel, die Verwendung der Ressourcen <strong>Wasser, Stoffe, Energie und Fläche/Raum im Quartier</strong> zu untersuchen.
+        Aus diesen Erkenntnissen sollen Instrumente zur effizienten Bewirtschaftung dieser Ressourcen entwickelt werden.
+        <br><br>
+        Der Maßnahmenkatalog dient als <strong>Planungshilfe für PlanerInnen</strong>, die sich einen schnellen Überblick über Maßnahmen verschaffen wollen, die im Rahmen der Quartierstransformation im Quartier eingesetzt werden können.
+        Es werden wichtige Aspekte zusammengefasst, die bei Planung, Bau und Betrieb beachtet werden müssen. Auch interdisziplinäre Synergien und Zielkonflikte werden thematisiert.
     </p>
     <button class="massnahmenLink" onclick="window.location.href='massnahme.php';">
             Zum Katalog
     </button>
 </div>
 
-<div class="mySlides fade">
-  <!-- <div class="numbertext">2 / 3</div> -->
+<!-- <div class="mySlides fade">
   <h1> Vorgehen </h1>
   <p style="text-align: justify">
         <br>
@@ -47,7 +46,6 @@ include 'parsedown-1.7.4/Parsedown.php';
 </div>
 
 <div class="mySlides fade">
-  <!-- <div class="numbertext">3 / 3</div> -->
   <h1> Der Katalog </h1>
   <p style="text-align: justify">
         <br>
@@ -56,19 +54,20 @@ include 'parsedown-1.7.4/Parsedown.php';
     <button class="massnahmenLink" onclick="window.location.href='massnahme.php';">
         Zum Katalog
     </button>
-</div>
+</div> -->
 
 <!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
+<br> -->
 
 <!-- The dots/circles -->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <span class="dot" onclick="currentSlide(1)"></span>
 <span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(3)"></span> -->
+
 </div>
 
         <!-- <div class="intro">
