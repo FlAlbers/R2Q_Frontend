@@ -253,7 +253,7 @@
 							<img class='figure_bsp' src='" . $r_Systemskizze_Bild . "'; >
 							<br>
 							<br>";
-							$parsedown = new Parsedown(); echo $parsedown->text("<figcaption><figcaptionPre>Abb. 1: </figcaptionPre>" . $r_Systemskizze_Beschriftung . "</figcaption>");
+							$parsedown = new Parsedown(); echo $parsedown->text("<figcaption><figcaptionPre>Abb. 2: </figcaptionPre>" . $r_Systemskizze_Beschriftung . "</figcaption>");
 							echo "</div>";
 						}
 					?>
@@ -468,23 +468,38 @@
 
 						if($sumLength != 0)
 						{
+							// echo "
+							// <table class='resTable'>
+							// 	<colgroup>
+							// 		<col style='width:30%'>
+							// 		<col style='width:70%'>
+							// 	</colgroup>
+							// 	<thead class='headerBlack'>
+							// 		<td>Literaturstelle</td>
+							// 		<td>Bewertung</td>
+							// 	</thead>";
+							// 	for ($i = 0; $i < 10; $i++)
+							// 	{
+							// 		if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
+							// 			$parsedown_Lit = new Parsedown();
+							// 			$parsedown_Bew = new Parsedown();
+							// 			echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td>";
+							// 			echo "<td>" . $parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr>";
+							// 		} 
+							// 	}							
+							// echo "</table>";
+
+
 							echo "
 							<table class='resTable'>
-								<colgroup>
-									<col style='width:30%'>
-									<col style='width:70%'>
-								</colgroup>
 								<thead class='headerBlack'>
-									<td>Literaturstelle</td>
-									<td>Bewertung</td>
+									<td>Literaturstellen</td>
 								</thead>";
 								for ($i = 0; $i < 10; $i++)
 								{
 									if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
 										$parsedown_Lit = new Parsedown();
-										$parsedown_Bew = new Parsedown();
-										echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td>";
-										echo "<td>" . $parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr>";
+										echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td></tr>";
 									} 
 								}							
 							echo "</table>";

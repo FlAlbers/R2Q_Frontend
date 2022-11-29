@@ -580,8 +580,7 @@ if($sumLength != 0)
     $html4 = "<div style='page-break-inside: avoid;'><table style='page-break-inside: avoid;' class='resTable'>
         <tbody>
             <tr>
-                <td style='width:40%;' class='PlanC1H'>Literaturstelle</td>
-                <td style='width:60%;' class='PlanC2H'>Bewertung</td>
+                <td class='PlanC1H'>Literaturstellen</td>
             </tr>
         </tbody>
     </table>";
@@ -591,18 +590,30 @@ if($sumLength != 0)
     for ($i = 0; $i < sizeof($r_Bewertung_table)/2; $i++)
     {
         if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]!="" ) {
+            // if ($i == $first) {
+            //     // $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
+            //     // <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i][1]) . "</td>";
+            //     // $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table></div>";
+            //     $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
+            //     <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
+            //     $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table></div>";
+            // } else {
+            //     $html4 = $html4 . "<table class='resTable'  style='border-top: 1px solid gray;'>
+            //     <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
+            //     $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table>";
+            // }
+
             if ($i == $first) {
                 // $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
                 // <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i][1]) . "</td>";
                 // $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table></div>";
                 $html4 = $html4 . "<table class='resTable'  style='border-top: 2px solid black;'>
-                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
-                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table></div>";
+                <tr><td style='vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table></div>";
             } else {
                 $html4 = $html4 . "<table class='resTable'  style='border-top: 1px solid gray;'>
-                <tr><td style='width:40%; vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td>";
-                $html4 = $html4 . "<td  style='width:60%; vertical-align:top'>" . $Parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr></table>";
+                <tr><td style='vertical-align:top'>" .  $Parsedown_Lit->text($r_Bewertung_table[$i+sizeof($r_Bewertung_table)/2][1]) . "</td></tr></table>";
             }
+
         } else {
             $first = $first + 1;
         }
