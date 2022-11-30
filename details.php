@@ -304,7 +304,19 @@
 
 				<p>
 					<?php 
-					echo "<table class='resTable'>
+					$sum_string = null;
+
+					for ($i=1; $i < 6; $i++) { 
+						 $sum_string = $sum_string . ${"r_Aufwand_i" . $i}[0][0] . ${"r_Aufwand_b" . $i}[0][0] . 
+						 ${"r_Aufwand_i" . $i}[1][0] . ${"r_Aufwand_b" . $i}[1][0] . 
+						 ${"r_Aufwand_i" . $i}[2][0] . ${"r_Aufwand_b" . $i}[2][0] . 
+						 ${"r_Aufwand_i" . $i}[3][0] . ${"r_Aufwand_b" . $i}[3][0];
+					}
+
+					// echo ();
+
+					if (strlen($sum_string) > 0 ) {
+						echo "<table class='resTable'>
 						<colgroup>
 							<col style='width:10%'>
 							<col style='width:6.66666%'>
@@ -319,44 +331,45 @@
 							<col style='width:6.66666%'>
 							<col style='width:6.66666%'>
 						</colgroup>
-					<thead class='headerBlack'><td colspan='6'>Investitionskosten</td><td colspan='6'>Betriebskosten</td></thead>
-						<tr><td>&nbsp</td>";
-						for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_i" . $i}[0][0]!="")?"<td class='gray'>€/" . ${"r_Aufwand_i" . $i}[0][0] . "</td>":"<td>&nbsp</td>";
-							}
-							echo "<td class='gray'>&nbsp</td>";
+						<thead class='headerBlack'><td colspan='6'>Investitionskosten</td><td colspan='6'>Betriebskosten</td></thead>
+							<tr><td>&nbsp</td>";
 							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_b" . $i}[0][0]!="")?"<td class='gray'>€/" . ${"r_Aufwand_b" . $i}[0][0] . "</td>":"<td>&nbsp</td>";
-							}
-						echo "</tr>";
-						echo "<tr class='hline'><td class='gray'>min</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_i" . $i}[2][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[2][0] . "</td>":"<td>&nbsp</td>";
-							}
-							echo "<td class='gray'>min</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_b" . $i}[2][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[2][0] . "</td>":"<td>&nbsp</td>";
-							}
-						echo "</tr>";
-						echo "<tr class='hline'><td class='gray'>max</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_i" . $i}[1][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[1][0] . "</td>":"<td>&nbsp</td>";
-							}
-							echo "<td class='gray'>max</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_b" . $i}[1][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[1][0] . "</td>":"<td>&nbsp</td>";
-							}
-						echo "</tr>";
-						echo "<tr class='hline'><td class='gray'>üblich</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_i" . $i}[3][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[3][0] . "</td>":"<td>&nbsp</td>";
-							}
-							echo "<td class='gray'>üblich</td>";
-							for ($i = 1; $i < 6; $i++)
-							{echo ( ${"r_Aufwand_b" . $i}[3][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[3][0] . "</td>":"<td>&nbsp</td>";
-							}
-						echo "</tr>";
-					echo "</table>";					
+								{echo ( ${"r_Aufwand_i" . $i}[0][0]!="")?"<td class='gray'>€/" . ${"r_Aufwand_i" . $i}[0][0] . "</td>":"<td>&nbsp</td>";
+								}
+								echo "<td class='gray'>&nbsp</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_b" . $i}[0][0]!="")?"<td class='gray'>€/" . ${"r_Aufwand_b" . $i}[0][0] . "</td>":"<td>&nbsp</td>";
+								}
+							echo "</tr>";
+							echo "<tr class='hline'><td class='gray'>min</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_i" . $i}[2][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[2][0] . "</td>":"<td>&nbsp</td>";
+								}
+								echo "<td class='gray'>min</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_b" . $i}[2][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[2][0] . "</td>":"<td>&nbsp</td>";
+								}
+							echo "</tr>";
+							echo "<tr class='hline'><td class='gray'>max</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_i" . $i}[1][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[1][0] . "</td>":"<td>&nbsp</td>";
+								}
+								echo "<td class='gray'>max</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_b" . $i}[1][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[1][0] . "</td>":"<td>&nbsp</td>";
+								}
+							echo "</tr>";
+							echo "<tr class='hline'><td class='gray'>üblich</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_i" . $i}[3][0]!="")?"<td>" . ${"r_Aufwand_i" . $i}[3][0] . "</td>":"<td>&nbsp</td>";
+								}
+								echo "<td class='gray'>üblich</td>";
+								for ($i = 1; $i < 6; $i++)
+								{echo ( ${"r_Aufwand_b" . $i}[3][0]!="")?"<td>" . ${"r_Aufwand_b" . $i}[3][0] . "</td>":"<td>&nbsp</td>";
+								}
+							echo "</tr>";
+						echo "</table>";
+						}					
 					?>
 				</p>
 

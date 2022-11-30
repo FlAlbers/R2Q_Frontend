@@ -310,92 +310,110 @@ if($sumLength != 0)
 $mpdf->WriteHTML("<h4>Aufwand und Kosten</h4><div style='text-align: justify; margin-top: -15px;'>"
 . $r_Aufwand_freetext . "</div>"
 );
+ 
+// sum up characters in table for Aufwand & Kosten
+ $sum_string = null;
 
- if (strlen($r_Aufwand_i5[0][0])>0) {
-    $VBorder = " border-left: 1px solid gray";
- } else {
-     $VBorder = "";
+ for ($i=1; $i < 6; $i++) { 
+      $sum_string = $sum_string . ${"r_Aufwand_i" . $i}[0][0] . ${"r_Aufwand_b" . $i}[0][0] . 
+      ${"r_Aufwand_i" . $i}[1][0] . ${"r_Aufwand_b" . $i}[1][0] . 
+      ${"r_Aufwand_i" . $i}[2][0] . ${"r_Aufwand_b" . $i}[2][0] . 
+      ${"r_Aufwand_i" . $i}[3][0] . ${"r_Aufwand_b" . $i}[3][0];
  }
 
-$head = "<div>";
+// if no entry in table then dont show table 
+ if (strlen($sum_string) > 0) {
 
-$row1 = "<div style='page-break-inside: avoid; float: left; width: 50%; margin-right: -4px'><table class='resTable' style='overflow: wrap;'>
-<tr>
-    <td style='width:100%; border-bottom: 2px solid black'><div class='headerBlack'>Investitionskosten</div></td>
-</tr>
-</table>
-<table class='resTable'  style='overflow: wrap;'>
-<tr><td style='color: gray; font-weight: bold; width: 10%'>&nbsp;</td>";
-for ($i = 1; $i < 6; $i++) {
-    ( ${"r_Aufwand_i" . $i}[0][0]!="")? $row1 = $row1 . "<td style='color: gray; font-weight: bold; width: auto; text-align: center'>€/" . ${"r_Aufwand_i" . $i}[0][0] . "</td>": $row1 = $row1;
+    if (strlen($r_Aufwand_i5[0][0])>0) {
+        $VBorder = " border-left: 1px solid gray";
+     } else {
+         $VBorder = "";
+     }
+
+    $head = "<div>";
+
+    $row1 = "<div style='page-break-inside: avoid; float: left; width: 50%; margin-right: -4px'><table class='resTable' style='overflow: wrap;'>
+    <tr>
+        <td style='width:100%; border-bottom: 2px solid black'><div class='headerBlack'>Investitionskosten</div></td>
+    </tr>
+    </table>
+    <table class='resTable'  style='overflow: wrap;'>
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>&nbsp;</td>";
+    for ($i = 1; $i < 6; $i++) {
+        ( ${"r_Aufwand_i" . $i}[0][0]!="")? $row1 = $row1 . "<td style='color: gray; font-weight: bold; width: auto; text-align: center'>€/" . ${"r_Aufwand_i" . $i}[0][0] . "</td>": $row1 = $row1;
+        }
+    $row1 = $row1 .  "</tr>";
+
+
+    $row2 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>min</td>";
+    for ($i = 1; $i < 6; $i++) {
+        ( ${"r_Aufwand_i" . $i}[2][0]!="")? $row2 = $row2 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[2][0] . "</td>": $row2 = $row2;
     }
-$row1 = $row1 .  "</tr>";
+    $row2 = $row2 .  "</tr>";
 
 
-$row2 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>min</td>";
-for ($i = 1; $i < 6; $i++) {
-    ( ${"r_Aufwand_i" . $i}[2][0]!="")? $row2 = $row2 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[2][0] . "</td>": $row2 = $row2;
-}
-$row2 = $row2 .  "</tr>";
+    $row3 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>max</td>";
+    for ($i = 1; $i < 6; $i++) {
+        ( ${"r_Aufwand_i" . $i}[1][0]!="")? $row3 = $row3 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[1][0] . "</td>": $row3 = $row3;
+    }
+    $row3 = $row3 .  "</tr>";
 
 
-$row3 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>max</td>";
-for ($i = 1; $i < 6; $i++) {
-    ( ${"r_Aufwand_i" . $i}[1][0]!="")? $row3 = $row3 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[1][0] . "</td>": $row3 = $row3;
-}
-$row3 = $row3 .  "</tr>";
-
-
-$row4 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>üblich</td>";
-for ($i = 1; $i < 6; $i++) {
-    ( ${"r_Aufwand_i" . $i}[3][0]!="")? $row4 = $row4 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[3][0] . "</td>": $row4 = $row4;
-}
-$row4 = $row4 .  "</tr></table></div>";
+    $row4 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>üblich</td>";
+    for ($i = 1; $i < 6; $i++) {
+        ( ${"r_Aufwand_i" . $i}[3][0]!="")? $row4 = $row4 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_i" . $i}[3][0] . "</td>": $row4 = $row4;
+    }
+    $row4 = $row4 .  "</tr></table></div>";
 
 
 
 
-$row5 = "<div style='page-break-inside: avoid; float: left; width: 50%; margin-left: -4px'><table class='resTable' style='overflow: wrap;'>
-<tr>
-    <td style='width:100%; border-bottom: 2px solid black'><div class='headerBlack'>Betriebskosten</div></td>
-</tr>
-</table>
-<table class='resTable' style='overflow: wrap;" . $VBorder . "'>
-<tr><td style='color: gray; font-weight: bold; width: 10%'>&nbsp;</td>";
-for ($i = 1; $i < 6; $i++) {
-( ${"r_Aufwand_b" . $i}[0][0]!="")? $row5 = $row5 . "<td style='color: gray; font-weight: bold; width: auto; text-align: center'>€/" . ${"r_Aufwand_b" . $i}[0][0] . "</td>": $row5 = $row5;
-}
-$row5 = $row5 .  "</tr>";
+    $row5 = "<div style='page-break-inside: avoid; float: left; width: 50%; margin-left: -4px'><table class='resTable' style='overflow: wrap;'>
+    <tr>
+        <td style='width:100%; border-bottom: 2px solid black'><div class='headerBlack'>Betriebskosten</div></td>
+    </tr>
+    </table>
+    <table class='resTable' style='overflow: wrap;" . $VBorder . "'>
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>&nbsp;</td>";
+    for ($i = 1; $i < 6; $i++) {
+    ( ${"r_Aufwand_b" . $i}[0][0]!="")? $row5 = $row5 . "<td style='color: gray; font-weight: bold; width: auto; text-align: center'>€/" . ${"r_Aufwand_b" . $i}[0][0] . "</td>": $row5 = $row5;
+    }
+    $row5 = $row5 .  "</tr>";
 
 
-$row6 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>min</td>";
-for ($i = 1; $i < 6; $i++) {
-( ${"r_Aufwand_b" . $i}[2][0]!="")? $row6 = $row6 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[2][0] . "</td>": $row6 = $row6;
-}
-$row6 = $row6 .  "</tr>";
+    $row6 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>min</td>";
+    for ($i = 1; $i < 6; $i++) {
+    ( ${"r_Aufwand_b" . $i}[2][0]!="")? $row6 = $row6 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[2][0] . "</td>": $row6 = $row6;
+    }
+    $row6 = $row6 .  "</tr>";
 
 
-$row7 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>max</td>";
-for ($i = 1; $i < 6; $i++) {
-( ${"r_Aufwand_b" . $i}[1][0]!="")? $row7 = $row7 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[1][0] . "</td>": $row7 = $row7;
-}
-$row7 = $row7 .  "</tr>";
+    $row7 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>max</td>";
+    for ($i = 1; $i < 6; $i++) {
+    ( ${"r_Aufwand_b" . $i}[1][0]!="")? $row7 = $row7 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[1][0] . "</td>": $row7 = $row7;
+    }
+    $row7 = $row7 .  "</tr>";
 
 
-$row8 = "
-<tr><td style='color: gray; font-weight: bold; width: 10%'>üblich</td>";
-for ($i = 1; $i < 6; $i++) {
-( ${"r_Aufwand_b" . $i}[3][0]!="")? $row8 = $row8 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[3][0] . "</td>": $row8 = $row8;
-}
-$row8 = $row8 .  "</tr></table></div></div>";
+    $row8 = "
+    <tr><td style='color: gray; font-weight: bold; width: 10%'>üblich</td>";
+    for ($i = 1; $i < 6; $i++) {
+    ( ${"r_Aufwand_b" . $i}[3][0]!="")? $row8 = $row8 . "<td style='width: auto; text-align: center'>" . ${"r_Aufwand_b" . $i}[3][0] . "</td>": $row8 = $row8;
+    }
+    $row8 = $row8 .  "</tr></table></div></div>";
+
+    $mpdf->WriteHTML($head . $row1 . $row2 . $row3 . $row4 . $row5 . $row6 . $row7 . $row8);
+
+ }
 
 
-$mpdf->WriteHTML($head . $row1 . $row2 . $row3 . $row4 . $row5 . $row6 . $row7 . $row8);
+
+
 
 if (strlen($r_Aufwand_hinweis) != 0) {
     $mpdf->WriteHTML('<Div class="boldGray" style="margin-top: 5px">Hinweis:</Div>' . $r_Aufwand_hinweis . '</td>');
