@@ -789,4 +789,4 @@ if ($_GET['downType'] == "D") {
     $downType = "I";
 }
 
-$mpdf->Output("mpdf.pdf", $downType); // für direkten Download der PDF -> für "I" ein "D" einsetzten 
+$mpdf->Output($r_Titel . ".pdf", $downType); // für direkten Download der PDF -> für "I" ein "D" einsetzten 

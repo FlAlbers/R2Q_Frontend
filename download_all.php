@@ -30,8 +30,19 @@
 					?>
 				</div>
 				<div class = "refContent">
-					<!-- <h3  style = "width: 1000px; text-align: justify;">  </h3> -->
+					<h3  style = "width: 1000px; text-align: justify;">  </h3>
+					<?php
+						// echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+						// <div class='downButtonSmall'>
+						// <input class='downInp' type='submit' name='submitpdf' value='' />
+						// </form></div></td>";
+					?>
 					
+
+					<!-- <form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+					<div class='downButton'>
+					<input class='downInp' type='submit' name='submitpdf' value='&nbsp; &nbsp; Alle Downloaden' />
+					</form> -->
 				</div>
 			</div>
 			<?php include 'footer.php'; ?>
