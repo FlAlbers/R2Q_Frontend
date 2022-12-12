@@ -306,6 +306,31 @@ thead.resultsTableHeader{
   box-shadow: 3px 3px 6px #0003;
   }
 
+.downButtonSmall input {
+  border: none;
+  background-color: #008243;
+  background-image: url(download.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  box-shadow: 1px 1px 3px #0003;
+  outline: none;
+  padding: 10px 15px;
+  margin: 0px 10px -17px 0px;
+  font-size: 12px;
+  /* border-radius: 5px; */
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  }  
+  
+.downButtonSmall input:hover {
+  background-color: #0f663a;
+  color: rgb(255, 254, 254);
+  transform: scale(1.05);
+  box-shadow: 3px 3px 6px #0003;
+  }  
+
+
 /* Style the tab content */
 .tabcontent {
   display: none;

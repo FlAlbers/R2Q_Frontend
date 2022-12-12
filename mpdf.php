@@ -783,5 +783,10 @@ if ($r_Fallbsp3[0][0]!="" or $r_Fallbsp3[1][0]!="" or $r_Fallbsp3[2][0]!="" or $
 
 $mpdf->WriteHTML($html7);
 
+if ($_GET['downType'] == "D") {
+    $downType = "D";
+} else {
+    $downType = "I";
+}
 
-$mpdf->Output("mpdf.pdf", "I"); // für direkten Download der PDF -> für "I" ein "D" einsetzten 
+$mpdf->Output("mpdf.pdf", $downType); // für direkten Download der PDF -> für "I" ein "D" einsetzten 

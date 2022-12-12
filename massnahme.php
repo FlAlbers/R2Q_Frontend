@@ -153,6 +153,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Baustoffe &nbsp; <i class='fas fa-cubes'></i></td>
+													<td style='font-size: 30px;' >&nbsp; </i></td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($result2 as $row2) {
@@ -164,10 +165,14 @@
 														if ($titel[0][0]=="") {
 															$titel[0][0] = "!!Titel noch nicht vorhanden!!";
 														}
+
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
-														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
 													}
@@ -192,6 +197,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Energie &nbsp; <i class='fas fa-battery-half'></i></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($result2 as $row2) {
@@ -206,6 +212,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -231,6 +241,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Niederschlagswasser &nbsp; <i class='fas fa-cloud-rain'></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($result2 as $row2) {
@@ -245,6 +256,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -271,6 +286,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Schmutzwasser &nbsp; <i class='fas fa-toilet'></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($result2 as $row2) {
@@ -285,6 +301,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -380,6 +400,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Baustoffe &nbsp;<i class='fa fa-cubes'></i></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($default_result as $row2) {
@@ -394,6 +415,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -419,6 +444,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Energie</td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($default_result as $row2) {
@@ -433,6 +459,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -458,6 +488,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Niederschlagswasser &nbsp; <i class='fas fa-cloud-rain'></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($default_result as $row2) {
@@ -472,6 +503,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
@@ -498,6 +533,7 @@
 												
 												<thead class='search'>
 													<td style='font-size: 30px;' >Maßnahmen für Schmutzwasser &nbsp; <i class='fas fa-toilet'></td>
+													<td style='font-size: 30px;' > &nbsp;</td>
 												</thead>";
 												//while($row = mysqli_fetch_assoc($result))
 												foreach ($default_result as $row2) {
@@ -512,6 +548,10 @@
 														//echo "<tr><td>" . $row2["id"] . "</td>";
 														echo "<tr class='searchRow'>";
 														echo "<td class='searchCell'>" . "<a class='resultRef' href='details.php?id=" . $row2["id"] . "'>" . $titel[0][0] . "</a>" . "</td>";
+														echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
+														<div class='downButtonSmall'>
+															<input class='downInp' type='submit' name='submitpdf' value='' />
+														</form></div></td>";
 														// echo "<td style='text-align:center'>" . $row2["ressource"] . "</td>";
 														echo "</tr>";
 														//echo "<td>" . $row2["kategorieIndex"] . "</td></tr>";
