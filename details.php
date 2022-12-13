@@ -434,16 +434,14 @@
 				</p>
 
 				<p>
-
-				<!-- <h4>Ressourcenübergreifende Aspekte</h4>	 -->
-					<?php 
+					<?php
 
 						$sumLength = 0;
 						
 						$sumLengthText = "";
 						$sumLengthText = $r_AspekteSynNiederschlag . $r_AspekteKonfNiederschlag . $r_AspekteSynSchmutzwasser . $r_AspekteKonfSchmutzwasser . 
 						$r_AspekteSynBaustoffe . $r_AspekteKonfBaustoffe . $r_AspekteSynEnergie . $r_AspekteKonfEnergie . $r_AspekteSynFläche . $r_AspekteKonfFläche;
-						$sumLength = strlen($sumLengthText);				
+						$sumLength = strlen($sumLengthText);
 
 						if($sumLength != 0)
 						// if(!empty($r_Weitergehende_table))
@@ -496,10 +494,7 @@
 				</p>
 			
 
-
-
 				<?php 
-					
 					$sumLength = 0;
 					for ($i=0; $i < sizeof($r_Bewertung_table); $i++) {
 						$sumLength = $sumLength + strlen($r_Bewertung_table[$i][1]);
@@ -509,60 +504,57 @@
 					if ($sumLength || strlen($r_Bewertung_freetext) != 0) {
 						echo "<h4>Ökobilanzielle Bewertung</h4>";
 					}
-
 				?>
 
+				<p>
+					<?php echo $r_Bewertung_freetext;?>
+				</p>
 
-				<!-- <h4>Ökobilanzielle Bewertung</h4> -->
-					<p>
-						<?php echo $r_Bewertung_freetext;?>
-					</p>
+				<?php
+					$sumLength = 0;
+					for ($i=0; $i < sizeof($r_Bewertung_table); $i++) {
+						$sumLength = $sumLength + strlen($r_Bewertung_table[$i][1]);
+					}
 
-					<?php
-						$sumLength = 0;
-						for ($i=0; $i < sizeof($r_Bewertung_table); $i++) {
-							$sumLength = $sumLength + strlen($r_Bewertung_table[$i][1]);
-						}
-
-						if($sumLength != 0)
-						{
-							// echo "
-							// <table class='resTable'>
-							// 	<colgroup>
-							// 		<col style='width:30%'>
-							// 		<col style='width:70%'>
-							// 	</colgroup>
-							// 	<thead class='headerBlack'>
-							// 		<td>Literaturstelle</td>
-							// 		<td>Bewertung</td>
-							// 	</thead>";
-							// 	for ($i = 0; $i < 10; $i++)
-							// 	{
-							// 		if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
-							// 			$parsedown_Lit = new Parsedown();
-							// 			$parsedown_Bew = new Parsedown();
-							// 			echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td>";
-							// 			echo "<td>" . $parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr>";
-							// 		} 
-							// 	}							
-							// echo "</table>";
+					if($sumLength != 0)
+					{
+						// echo "
+						// <table class='resTable'>
+						// 	<colgroup>
+						// 		<col style='width:30%'>
+						// 		<col style='width:70%'>
+						// 	</colgroup>
+						// 	<thead class='headerBlack'>
+						// 		<td>Literaturstelle</td>
+						// 		<td>Bewertung</td>
+						// 	</thead>";
+						// 	for ($i = 0; $i < 10; $i++)
+						// 	{
+						// 		if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
+						// 			$parsedown_Lit = new Parsedown();
+						// 			$parsedown_Bew = new Parsedown();
+						// 			echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td>";
+						// 			echo "<td>" . $parsedown_Bew->text($r_Bewertung_table[$i][1]) . "</td></tr>";
+						// 		} 
+						// 	}							
+						// echo "</table>";
 
 
-							echo "
-							<table class='resTable'>
-								<thead class='headerBlack'>
-									<td>Literaturstellen</td>
-								</thead>";
-								for ($i = 0; $i < 10; $i++)
-								{
-									if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
-										$parsedown_Lit = new Parsedown();
-										echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td></tr>";
-									} 
-								}							
-							echo "</table>";
-						}
-					?>
+						echo "
+						<table class='resTable'>
+							<thead class='headerBlack'>
+								<td>Literaturstellen</td>
+							</thead>";
+							for ($i = 0; $i < 10; $i++)
+							{
+								if ($r_Bewertung_table[$i][1]!="" or $r_Bewertung_table[$i+10][1]!="") {
+									$parsedown_Lit = new Parsedown();
+									echo "<tr class='hline'><td>" . $parsedown_Lit->text($r_Bewertung_table[$i+10][1]) . "</td></tr>";
+								} 
+							}							
+						echo "</table>";
+					}
+				?>
 				</p>
 
 				<?php
