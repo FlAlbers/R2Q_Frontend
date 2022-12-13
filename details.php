@@ -379,7 +379,22 @@
 					}
 				?>
 				
-				<h4>Weitergehende Hinweise</h4>				
+<!-- Weitergehende Hinweise ---------------------------------------------------- -->
+
+				<?php 
+					
+					$sumLength = 0;
+					for ($i=0; $i < sizeof($r_Weitergehende_table); $i++) {
+						$sumLength = $sumLength + strlen($r_Weitergehende_table[$i][1]);
+					}
+
+
+					if ($sumLength || strlen($r_Weitergehende_freetext) != 0) {
+						echo "<h4>Weitergehende Hinweise</h4>";
+					}
+
+				?>
+
 				<p>
 					<?php echo $r_Weitergehende_freetext;?>
 				</p>
@@ -468,7 +483,25 @@
 					?>
 				</p>
 			
-				<h4>Ökobilanzielle Bewertung</h4>
+
+
+
+				<?php 
+					
+					$sumLength = 0;
+					for ($i=0; $i < sizeof($r_Bewertung_table); $i++) {
+						$sumLength = $sumLength + strlen($r_Bewertung_table[$i][1]);
+					}
+
+
+					if ($sumLength || strlen($r_Bewertung_freetext) != 0) {
+						echo "<h4>Ökobilanzielle Bewertung</h4>";
+					}
+
+				?>
+
+
+				<!-- <h4>Ökobilanzielle Bewertung</h4> -->
 					<p>
 						<?php echo $r_Bewertung_freetext;?>
 					</p>
@@ -520,24 +553,31 @@
 					?>
 				</p>
 
-
-				<h4>Kombinationsmöglichkeiten</h4>
-				
 				<?php
-				echo "<table>";
-				
-				for($i = 0; $i < count($r_Kombi); $i++){
-					if ($r_Kombi[$i][1]!="") {						
-					echo "<tr><td><a class='bold' target='_blank' href='./details.php?id=" . $r_Kombi[$i][0] . "'>";
-					echo $r_Kombi[$i][1];
-					echo "</a></td></tr>";
+					$kombi_strlen = "";
+					for ($i=0; $i < count($r_Kombi); $i++) { 
+						$kombi_strlen = $kombi_strlen . $r_Kombi[$i][1];
 					}
-				}
-				echo "</table>
-				<div style='margin-top: 10px' ><div><strong>Hinweis:&nbsp;</strong></div>
-				<div class='refMatrixDiv'>Weitergehende Informationen zu Maßnahmenkombinationen finden sie
-				<a class='refMatrix' target='_blank'  href='documents\Layout_Massnahmenmatrix_210817.pdf'>HIER</a>
-				</div></div>";
+
+					if (strlen($kombi_strlen) != 0) {
+						echo "<h4>Kombinationsmöglichkeiten</h4>";
+					
+				
+					echo "<table>";
+					
+					for($i = 0; $i < count($r_Kombi); $i++){
+						if ($r_Kombi[$i][1]!="") {						
+						echo "<tr><td><a class='bold' target='_blank' href='./details.php?id=" . $r_Kombi[$i][0] . "'>";
+						echo $r_Kombi[$i][1];
+						echo "</a></td></tr>";
+						}
+					}
+					echo "</table>
+					<div style='margin-top: 10px' ><div><strong>Hinweis:&nbsp;</strong></div>
+					<div class='refMatrixDiv'>Weitergehende Informationen zu Maßnahmenkombinationen finden sie
+					<a class='refMatrix' target='_blank'  href='documents\Layout_Massnahmenmatrix_210817.pdf'>HIER</a>
+					</div></div>";
+					}
 				?>
 				
 				<?php 

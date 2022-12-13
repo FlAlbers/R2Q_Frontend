@@ -422,9 +422,29 @@ if (strlen($r_Aufwand_hinweis) != 0) {
 
 // Weitergehende Hinweise
 
-$mpdf->WriteHTML("<h4>Weitergehende Hinweise</h4><div style='text-align: justify;'>"
-. $r_Weitergehende_freetext . "</div>"
-);
+
+// $kombi_strlen = "";
+// for ($i=0; $i < count($r_Kombi); $i++) { 
+// 	$kombi_strlen = $kombi_strlen . $r_Kombi[$i][1];
+// }
+
+// if (strlen($kombi_strlen) != 0) {
+// 	echo "<h4>Kombinationsmöglichkeiten</h4>";
+// }
+
+
+$sumLength = 0;
+for ($i=0; $i < sizeof($r_Weitergehende_table); $i++) {
+    $sumLength = $sumLength + strlen($r_Weitergehende_table[$i][1]);
+}
+
+
+if($sumLength || strlen($r_Weitergehende_freetext) != 0)
+{
+    $mpdf->WriteHTML("<h4>Weitergehende Hinweise</h4><div style='text-align: justify;'>"
+    . $r_Weitergehende_freetext . "</div>"
+    );
+}
 
 $sumLength = 0;
 for ($i=0; $i < sizeof($r_Weitergehende_table); $i++) {
@@ -642,12 +662,18 @@ if($sumLength != 0)
 $mpdf->WriteHTML($html4);
 
 //Kombinationsmöglichkeiten
+$kombi_strlen = "";
+for ($i=0; $i < count($r_Kombi); $i++) { 
+    $kombi_strlen = $kombi_strlen . $r_Kombi[$i][1];
+}
 
-if (count($r_Kombi) != 0) {
+if (strlen($kombi_strlen) != 0) {
     $mpdf->WriteHTML("<h4>Kombinationsmöglichkeiten</h4>"
     );
 }
-				
+
+
+
 $html5 = "<table>";
 
 for($i = 0; $i < count($r_Kombi); $i++){
