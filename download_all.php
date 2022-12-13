@@ -32,16 +32,16 @@
 				<div class = "refContent">
 					<h3  style = "width: 1000px; text-align: justify;">  </h3>
 					<?php
-						// echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
-						// <div class='downButtonSmall'>
-						// <input class='downInp' type='submit' name='submitpdf' value='' />
+						// echo "<td style='text-align:right'>" . "<form name='etcsvpdf' action='download_all_action.php' method='POST' target='_blank'>
+						// <div class='downButton'>
+						// <input class='downInp' type='submit' name='downAllPdf' value='&nbsp; &nbsp; Alle downloaden' />
 						// </form></div></td>";
 					?>
 					
 
 					<!-- <form name='etcsvpdf' action='mpdf.php?id=" . $row2["id"] . "&downType=D' method='POST' target='_blank'>
 					<div class='downButton'>
-					<input class='downInp' type='submit' name='submitpdf' value='&nbsp; &nbsp; Alle Downloaden' />
+					<input class='downInp' type='submit' name='downAllPdf' value='&nbsp; &nbsp; Alle Downloaden' />
 					</form> -->
 				</div>
 			</div>

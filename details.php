@@ -528,7 +528,7 @@
 				
 				for($i = 0; $i < count($r_Kombi); $i++){
 					if ($r_Kombi[$i][1]!="") {						
-					echo "<tr><td><a class='bold' target='_blank' href='http://r2q.fh-muenster.de:8081/R2Q_Frontend/details.php?id=" . $r_Kombi[$i][0] . "'>";
+					echo "<tr><td><a class='bold' target='_blank' href='./details.php?id=" . $r_Kombi[$i][0] . "'>";
 					echo $r_Kombi[$i][1];
 					echo "</a></td></tr>";
 					}

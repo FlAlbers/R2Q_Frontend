@@ -407,6 +407,7 @@ $mpdf->WriteHTML("<h4>Aufwand und Kosten</h4><div style='text-align: justify; ma
     }
     $row8 = $row8 .  "</tr></table></div></div>";
 
+    // $tail = "</div>";
     $mpdf->WriteHTML($head . $row1 . $row2 . $row3 . $row4 . $row5 . $row6 . $row7 . $row8);
 
  }
@@ -651,7 +652,7 @@ $html5 = "<table>";
 
 for($i = 0; $i < count($r_Kombi); $i++){
     if ($r_Kombi[$i][1]!="") {						
-        $html5 = $html5 . "<tr><td><a class='bold' target='_blank' href='http://r2q.fh-muenster.de:8081/R2Q_Frontend/details.php?id=" . $r_Kombi[$i][0] . "'>";
+        $html5 = $html5 . "<tr><td><a class='bold' target='_blank' href='./details.php?id=" . $r_Kombi[$i][0] . "'>";
         $html5 = $html5 . $r_Kombi[$i][1];
         $html5 = $html5 .  "</a></td></tr>";
     }
