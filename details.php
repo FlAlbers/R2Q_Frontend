@@ -434,10 +434,22 @@
 				</p>
 
 				<p>
-				<h4>Ressourcenübergreifende Aspekte</h4>	
+
+				<!-- <h4>Ressourcenübergreifende Aspekte</h4>	 -->
 					<?php 
-						if(!empty($r_Weitergehende_table))
+
+						$sumLength = 0;
+						
+						$sumLengthText = "";
+						$sumLengthText = $r_AspekteSynNiederschlag . $r_AspekteKonfNiederschlag . $r_AspekteSynSchmutzwasser . $r_AspekteKonfSchmutzwasser . 
+						$r_AspekteSynBaustoffe . $r_AspekteKonfBaustoffe . $r_AspekteSynEnergie . $r_AspekteKonfEnergie . $r_AspekteSynFläche . $r_AspekteKonfFläche;
+						$sumLength = strlen($sumLengthText);				
+
+						if($sumLength != 0)
+						// if(!empty($r_Weitergehende_table))
 						{
+							echo "<h4>Ressourcenübergreifende Aspekte</h4>";
+
 							echo "<table class='resTable'>
 								<colgroup>
 									<col style='width:20%'>
