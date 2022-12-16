@@ -1,0 +1,54 @@
+﻿ressource;ID;Maßnahme;Quelle1;Quelle2
+N;01;Fassadenbegrünung;Mathias Uhl;Eigene Darstellung
+N;02;Stadtgrün;Mathias Uhl;
+N;03;Gründach;Mathias Uhl;
+N;04;Dachgarten;Mathias Uhl;
+N;05;Blue roof;??Campisano;
+N;06;Bewässerung;Mathias Uhl;
+N;07;Regenwassernutzung;Mathias Uhl;
+N;08;kombinierte Regen- und Grauwassernutzung;;
+N;09;Entsiegelung;Mathias Uhl;
+N;10;Flächen- & Muldenversickerung;Mathias Uhl;
+N;11;Schachtversickerung;Mathias Uhl;
+N;12;Rigolen- und Rohrrigolenversickerung;??Sieker;
+N;13;Mulden-Rigolen-Element/-System;Mathias Uhl;
+N;14;Regengarten;Mathias Uhl;
+N;15;Baumrigole;Bassuk et al;
+N;16;Multifunktionale Rückhalteräume;Mathias Uhl;
+S;01;Grauwasseraufbereitung;Hamse Kjerstadius;
+S;02;Grauwasserbehandlung mittels Pflanzenkläranlage;NaturBauHof.de;
+S;03;Urinbehandlung und -verwertung;VUNA GmbH;VUNA GmbH
+S;04;anaerobe Schwarzwasserbehandlung und -verwertung;Hamse Kjerstadius;
+S;05;Unterdruckentwässerung;Hamse Kjerstadius;Susanne Veser
+S;06;Doppel-Inliner-Verfahren (Stoffstromtrennung in Bestandsgebäuden);Eigene Darstellung;
+S;07;(semizentrale) Abwasserwärmenutzung;Klinger und Partner GmbH;
+S;08;(dezentrale) Abwasserwärmenutzung;Warmduscher GmbH;
+S;09;MAP-Fällung;Hamse Kjerstadius;
+S;10;Strippung und saure Wäsche;Hamse Kjerstadius;
+B;01;Aufdoppelung WDVS;;
+B;02;Gipsrecycling;;
+B;3;Baustoffbörse;;
+B;04;Recyclingbeton;;
+B;05;Ausschreibungen;;
+B;06;Gebäudepass-Altbau;;
+B;07;Gebäudepass-Neubau;;
+E;01;Geothermieanlagen;EWZ, Erdwärme Grünwald;
+E;02;Solarthermieanlagen;badenova;
+E;03;Wärmepumpen;Ppntori, Reinraum;
+E;4;Biomasseheizwerke;SW Merzig, PLV Energieholz;
+E;05;Blockheizkraftwerke;SW Bamberg, 2G;
+E;06;Photovoltaikanlagen;mrganso, sferrario1968;
+E;07;Kleinwindkraftanlagen;NeoVenti;
+E;08;Kleinstwasserkraftanlagen;Richard Huber, Andreas Mühlbauer;
+E;09;Smart Grids;Julia.Roesler;
+E;10;Mieterstrommodelle;Avacon, SW Burg;
+E;11;Lokale Energiemärkte;Pebbles, WSW Wuppertaler SW;
+E;12;Wärmenetze;Björn Appel, Frank-m;
+E;13;Anergienetze;BauGrund Süd;
+E;14;Energetische Gebäudesanierung;Energiesprong;
+E;15;Demand Response;;
+E;16;Wärmespeicher;N-ERGIE;
+E;17;Power-to-Gas;Manuel Gruber, Uniper;
+E;18;Power-to-Heat;Vattenfall;
+E;19;Power-to-Mobility;AKrebs60;
+E;20;Batteriespeicher;Jelson25, Asurnipal;

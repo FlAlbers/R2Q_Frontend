@@ -41,6 +41,27 @@
 		return $id;
 	}
 
+
+	function get_res($m_id){
+		global $conn;
+		
+		$query_result = mysqli_query($conn, "SELECT ressource FROM joined_massnahme WHERE id = ". $m_id);
+		$res = "";
+		foreach ($query_result as $qr)
+			$res = $qr["ressource"];
+		return $res;
+	}
+
+	function get_resID($m_id){
+		global $conn;
+		
+		$query_result = mysqli_query($conn, "SELECT kategorieIndex FROM joined_massnahme WHERE id = ". $m_id);
+		$resID = "";
+		foreach ($query_result as $qr)
+			$resID = $qr["kategorieIndex"];
+		return $resID;
+	}
+	
 	// function chooseCb($cbValue) {
 	// 	if ($cbValue == 0) {echo "cb0";
 	// 	} elseif ($cbValue == 1) {echo "cb1";
@@ -95,7 +116,10 @@
 
 		$q_template = "SELECT wert FROM joined_massnahme WHERE id = " . $m_id . " AND ";
 
+
 		$r_Titel = get_wert("'Titel'");
+		$r_ressource = get_res($m_id);
+		$r_ressourceID = get_resID($m_id);
 		$r_Kurzbeschreibung =  get_wert_pd("'Kurzbeschreibung'");
 		$r_Umsetzungsbeispiel_Beschriftung = get_wert("'Umsetzungsbeispiel'","'Beschriftung'");
 		$r_Umsetzungsbeispiel_Bild = get_wert("'Umsetzungsbeispiel'","'Bild'");

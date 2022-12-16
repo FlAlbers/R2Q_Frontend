@@ -2,7 +2,27 @@
 	require_once 'sql.php';
 	
 	$post_set = $_POST?1:0;
-		
+	// $file_to_read = fopen('Bildverweise_Test.CSV', 'r');
+	// $bildref = fgetcsv($file_to_read, NULL, ";" )
+
+
+	function get2DArrayFromCsv($file, $delimiter) {
+		if (($handle = fopen($file, "r+")) !== FALSE) {
+			$i = 0;
+			$data2DArray = array();
+			while (($lineArray = fgetcsv($handle, 0, $delimiter)) !== FALSE) {
+				for ($j = 0; $j < count($lineArray); $j++) {
+					$data2DArray[$i][$j] = $lineArray[$j];
+				}
+				$i++;
+			}
+			fclose($handle);
+		}
+		return $data2DArray;
+	}
+
+	$bildref = get2DArrayFromCsv('Bildverweise_Test.CSV',';')
+
 ?>
 
 <html>
@@ -30,11 +50,11 @@
 					?>
 				</div>
 				<div class = "refContent">
-					<h3  style = "width: 1000px; text-align: justify;"> Bildverweise </h3>
+					<h3  style = "width: 1000px; text-align: justify;"> Bildverweise  </h3>
 					<table class="refTable" style="border-top: 2px solid black" >
 						<colgroup>
-							<col style='width:30%'>
-							<col style='width:70%'>
+							<col style='width:45%'>
+							<col style='width:55%'>
 						</colgroup>
 						<thead class='search'>
 							<td style='font-size: 25px;' >Bild &nbsp;</td>
@@ -49,6 +69,28 @@
 								<td style="padding: 3px 5px">Hintergrundbild Maßnahmenkatalog</td>
 								<td style="padding: 3px 5px">Danist Soh, 05.01.2016, <a href="https://unsplash.com/photos/dqXiw7nCb9Q"> https://unsplash.com/photos/dqXiw7nCb9Q</a> </td>
 							</tr>
+
+							<?php
+								
+								// cho var_dump($bildref);
+
+								for ($i=1; $i < count($bildref); $i++) { 
+									echo "<tr class='refRow'>
+									<td style='padding: 3px 5px'>" . $bildref[$i][0] . $bildref[$i][1] . "&nbsp; " . $bildref[$i][2] . " Abb. 1</td>
+									<td style='padding: 3px 5px'>" . $bildref[$i][3] . "</td>
+									</tr>";
+
+									if ($bildref[$i][4] != "") {
+										echo "<tr class='refRow'>
+										<td style='padding: 3px 5px'>" . $bildref[$i][0] . $bildref[$i][1] . "&nbsp; " . $bildref[$i][2] . " Abb. 2</td>
+										<td style='padding: 3px 5px'>" . $bildref[$i][4] . "</td>
+										</tr>";
+									}
+									
+								}
+							?>
+							
+
 							<!-- <tr class="searchrow">
 								<td></td>
 								<td></td>

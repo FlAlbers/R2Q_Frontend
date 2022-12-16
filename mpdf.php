@@ -24,7 +24,7 @@ $mpdf->SetHTMLHeader("
         <col style='width:95%'>
         <col style='width:5%'>
     </colgroup>
-    <tr><td>Maßnahmensteckbrief " . $r_Titel . "</td>
+    <tr><td>" . $r_ressource . $r_ressourceID . " Maßnahmensteckbrief " . $r_Titel . "</td>
     <td style='text-align: right'>{PAGENO}</td></tr>
 </table>
 <div class='hlineHeader'></div><br>");
