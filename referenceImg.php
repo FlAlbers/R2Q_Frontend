@@ -90,13 +90,14 @@
 
 							<?php
 								
-								// echo var_dump($bildref);
-
 								for ($i=1; $i < count($bildref); $i++) { 
-									echo "<tr class='refRow'>
-									<td style='padding: 3px 5px'>" . $bildref[$i][0] . $bildref[$i][1] . "&nbsp; " . $bildref[$i][2] . " Abb. 1</td>
-									<td style='padding: 3px 5px'>" . $bildref[$i][3] . "</td>
-									</tr>";
+									if ($bildref[$i][4] != "") {
+										echo "<tr class='refRow'>
+										<td style='padding: 3px 5px'>" . $bildref[$i][0] . $bildref[$i][1] . "&nbsp; " . $bildref[$i][2] . " Abb. 1</td>
+										<td style='padding: 3px 5px'>" . $bildref[$i][3] . "</td>
+										</tr>";
+									}
+
 
 									if ($bildref[$i][4] != "") {
 										echo "<tr class='refRow'>
