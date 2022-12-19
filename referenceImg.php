@@ -5,6 +5,24 @@
 	// $file_to_read = fopen('Bildverweise_Test.CSV', 'r');
 	// $bildref = fgetcsv($file_to_read, NULL, ";" )
 
+	function csv_to_multidimension_array($filename='', $delimiter=',')
+	{
+		if(!file_exists($filename) || !is_readable($filename)) {
+			return false;
+		}
+	
+		$header = NULL;
+		$data = array();
+	
+		if (($handle = fopen($filename, 'r')) !== false) {
+			while (($row = fgetcsv($handle, 1000, $delimiter)) !== false ) {
+				$data[] = $row;
+			}
+			fclose($handle);
+		}
+		return $data;
+	}
+
 
 	function get2DArrayFromCsv($file, $delimiter) {
 		if (($handle = fopen($file, "r+")) !== FALSE) {
@@ -21,7 +39,7 @@
 		return $data2DArray;
 	}
 
-	$bildref = get2DArrayFromCsv('Bildverweise_Test.CSV',';')
+	$bildref = csv_to_multidimension_array('Bildverweise_Test.CSV',';')
 
 ?>
 
@@ -72,7 +90,7 @@
 
 							<?php
 								
-								// cho var_dump($bildref);
+								// echo var_dump($bildref);
 
 								for ($i=1; $i < count($bildref); $i++) { 
 									echo "<tr class='refRow'>
