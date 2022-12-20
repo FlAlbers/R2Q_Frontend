@@ -743,3 +743,15 @@ a.bold{
   vertical-align: middle;
 }
 
+.footer_link{
+  text-decoration: none;
+  color: white;
+
+}
+
+.footer_link:hover{
+  text-decoration: underline;
+  color: white;
+  
+}
+
