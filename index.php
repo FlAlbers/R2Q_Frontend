@@ -29,9 +29,27 @@ include 'parsedown-1.7.4/Parsedown.php';
         Der Maßnahmenkatalog dient als <strong>Planungshilfe für PlanerInnen</strong>, die sich einen schnellen Überblick über Maßnahmen verschaffen wollen, die im Rahmen der Quartierstransformation im Quartier eingesetzt werden können.
         Es werden wichtige Aspekte zusammengefasst, die bei Planung, Bau und Betrieb beachtet werden müssen. Auch interdisziplinäre Synergien und Zielkonflikte werden thematisiert.
     </p>
+
+
     <button class="massnahmenLink" onclick="window.location.href='massnahme.php';">
             Zum Katalog
     </button>
+
+    
+    <div class="row">
+        <div class="column">
+            <img src="BMBF.png" alt="Snow" style="width:60%">
+        </div>
+        <div class="column">
+            <img src="FONA.png" alt="Forest" style="width:60%">
+        </div>
+        <div class="column">
+            <img src="RESZ.png" alt="Mountains" style="width:60%">
+        </div>
+        <div class="column">
+            <img src="RESZ.png" alt="Mountains" style="width:60%">
+        </div>
+    </div>
 </div>
 
 <!-- <div class="mySlides fade">

@@ -384,9 +384,10 @@ thead.resultsTableHeader{
   margin: 7% 5% 2% 5% ;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 5%;
   font-size: 16px;
   flex-direction: column;
-  min-height: 60vh;
+  /* min-height: 85vh; */
 
 }
 
@@ -755,3 +756,32 @@ a.bold{
   
 }
 
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  margin-top: 5vh;
+  margin-bottom: -6vh;
+  text-align: center;
+}
+
+.column1 {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  margin-top: -5vh;
+  margin-bottom: -6vh;
+  text-align: center;
+  /* flex-basis: 100%; */
+}
+
+.row {
+  display: flex;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
