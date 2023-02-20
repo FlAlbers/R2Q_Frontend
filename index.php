@@ -46,9 +46,6 @@ include 'parsedown-1.7.4/Parsedown.php';
         <div class="column">
             <img src="RESZ.png" alt="Mountains" style="width:60%">
         </div>
-        <div class="column">
-            <img src="RESZ.png" alt="Mountains" style="width:60%">
-        </div>
     </div>
 </div>
 

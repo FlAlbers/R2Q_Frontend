@@ -376,6 +376,23 @@ thead.resultsTableHeader{
   flex-direction: column;
 }
 
+.refLibContent {
+	display: flex;
+	text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e3ffe5f5;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  font-size: 16px;
+  flex-direction: column;
+  overflow-wrap: normal;
+  word-wrap: break-word;
+  width: 100vw;
+}
+
+
+
 .aboutContent {
 	display: flex;
 	text-align: left;
