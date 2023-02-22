@@ -810,13 +810,28 @@ if ($r_Fallbsp3[0][0]!="" or $r_Fallbsp3[1][0]!="" or $r_Fallbsp3[2][0]!="" or $
 
 $mpdf->WriteHTML($html7);
 
-$mpdf->WriteHTML("<div style='page-break-inside: avoid;'>
-<div class='hlineHeader'></div>
-<p>
-Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter https://www.fh-muenster.de/r2q-massnahmensteckbriefe zu finden.
-</p>
-</div>
-");
+if ($r_ressource == "N") {
+    $mpdf->WriteHTML('<div style="page-break-inside: avoid;">
+    <div class="hlineHeader"></div>
+    <p>
+    Anmerkung: Teile dieses Steckbriefs wurden aus  "Maßnahmensteckbriefe der Regenwasserbewirtschaftung - Ergebnisse des Projektes KURAS" (Riechel et al. 2017) übernommen.
+    </p>
+    <p>
+    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”> zu finden.
+    </p>
+    </div>
+    ');
+} else {
+    $mpdf->WriteHTML('<div style="page-break-inside: avoid;">
+    <div class="hlineHeader"></div>
+    <p>
+    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”> zu finden.
+    </p>
+    </div>
+    '); 
+}
+
+
 
 
 if ($_GET['downType'] == "D") {
