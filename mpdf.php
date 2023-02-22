@@ -817,7 +817,7 @@ if ($r_ressource == "N") {
     Anmerkung: Teile dieses Steckbriefs wurden aus  "Maßnahmensteckbriefe der Regenwasserbewirtschaftung - Ergebnisse des Projektes KURAS" (Riechel et al. 2017) übernommen.
     </p>
     <p>
-    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”> zu finden.
+    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”>https://www.fh-muenster.de/r2q-massnahmensteckbriefe</a> zu finden.
     </p>
     </div>
     ');
@@ -825,7 +825,7 @@ if ($r_ressource == "N") {
     $mpdf->WriteHTML('<div style="page-break-inside: avoid;">
     <div class="hlineHeader"></div>
     <p>
-    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”> zu finden.
+    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”>https://www.fh-muenster.de/r2q-massnahmensteckbriefe</a> zu finden.
     </p>
     </div>
     '); 
