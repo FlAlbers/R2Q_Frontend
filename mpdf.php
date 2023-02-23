@@ -35,7 +35,12 @@ $mpdf->SetHTMLFooter("
 <div class='footer'>
     <br>
     <img style='margin-left: 20px; margin-right: -60px; margin-bottom: -20px' src='FooterResize.jpg'; >
-</div>");
+
+</div>
+<div class='cc-image'>
+<a rel='license' href='http://creativecommons.org/licenses/by/4.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by/4.0/80x15.png' /></a>
+</div>
+");
 
 
 //Kurzinformation///////////////////////////////////////////////////////////////////////////////////
@@ -817,7 +822,7 @@ if ($r_ressource == "N") {
     Anmerkung: Teile dieses Steckbriefs wurden aus  "Maßnahmensteckbriefe der Regenwasserbewirtschaftung - Ergebnisse des Projektes KURAS" (Riechel et al. 2017) übernommen.
     </p>
     <p>
-    Literaturverweise und Bild-Nutzungsrechte können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”>https://www.fh-muenster.de/r2q-massnahmensteckbriefe</a> zu finden.
+    Literaturverweise und Nutzungsrechte der Bilder können im Webtool oder der Gesamtpublikation der Steckbriefe entnommen werden. Sie sind unter <a href=”https://www.fh-muenster.de/r2q-massnahmensteckbriefe”>https://www.fh-muenster.de/r2q-massnahmensteckbriefe</a> zu finden.
     </p>
     </div>
     ');
