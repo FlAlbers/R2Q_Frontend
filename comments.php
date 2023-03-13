@@ -1,7 +1,7 @@
-<h3>Kommentare</h3>
+<!-- <h3>Kommentare</h3> -->
 
 <?php 
-
+/*
 	include 'sql.php';
 	if (isset($_GET))
 	{
@@ -37,13 +37,14 @@
 			}
 		}		
 	}	
+*/
 ?>
 
-<h4>Kommentar erstellen</h4>
+<!-- <h4>Kommentar erstellen</h4>
 		<form action = "details.php?id=<?php echo $id;?>" method = "POST">				
   			<textarea id="new_comment" name="new_comment" rows=4 cols=50></textarea>
   			<br><br>
   			<input class="buttonFilter" type = "Submit" value = "Bestätigen">&ensp;<input class="buttonFilter" type = "Reset" value = "Zurücksetzen">
 		</form>
-		
+		 -->
 		

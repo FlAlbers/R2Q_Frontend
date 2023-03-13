@@ -678,7 +678,6 @@
 				<br>
 				<br>
 				</div>
-				<?php include 'comments.php'; ?>
 
 				&nbsp;<br>
 				&nbsp;<br>

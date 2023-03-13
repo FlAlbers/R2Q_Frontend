@@ -39,7 +39,7 @@
 		return $data2DArray;
 	}
 
-	$bildref = csv_to_multidimension_array('Bildverweise_Test.CSV',';')
+	$bildref = csv_to_multidimension_array('Bildverweise_20230125.CSV',';')
 
 ?>
 

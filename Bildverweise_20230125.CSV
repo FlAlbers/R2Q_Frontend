@@ -1,0 +1,54 @@
+﻿ressource;ID;Maßnahme;Quelle1;Quelle2
+N;1;Fassadenbegrünung;Mathias Uhl;
+N;2;Stadtgrün;Mathias Uhl;
+N;3;Gründach;Mathias Uhl;
+N;4;Dachgarten;Mathias Uhl;
+N;5;Blue roof;;
+N;6;Bewässerung;Mathias Uhl;
+N;7;Regenwassernutzung;Mathias Uhl;
+N;8;kombinierte Regen- und Grauwassernutzung;Bernd Eisenberg;
+N;9;Entsiegelung;Mathias Uhl;
+N;10;Flächen- & Muldenversickerung;Mathias Uhl;
+N;11;Schachtversickerung;Mathias Uhl;
+N;12;Rigolen- und Rohrrigolenversickerung;Moreau1, Public domain, via Wikimedia Commons;
+N;13;Mulden-Rigolen-Element/-System;Mathias Uhl;
+N;14;Regengarten;Mathias Uhl;
+N;15;Baumrigole;Chris Hamby, lizensiert durch CC BY 4.0;Daniel Filippi, lizensiert durch CC BY 4.0
+N;16;Multifunktionale Rückhalteräume;Mathias Uhl;Jan Benden
+S;1;Grauwasseraufbereitung;Hamse Kjerstadius;
+S;2;Grauwasserbehandlung mittels Pflanzenkläranlage;NaturBauHof.de;
+S;3;Urinbehandlung und -verwertung;VUNA GmbH;VUNA GmbH
+S;4;anaerobe Schwarzwasserbehandlung und -verwertung;Hamse Kjerstadius;
+S;5;Unterdruckentwässerung;Hamse Kjerstadius;Susanne Veser
+S;6;Doppel-Inliner-Verfahren (Stoffstromtrennung in Bestandsgebäuden);Eigene Darstellung;
+S;7;(semizentrale) Abwasserwärmenutzung;Klinger und Partner GmbH;
+S;8;(dezentrale) Abwasserwärmenutzung;Warmduscher GmbH;
+S;9;MAP-Fällung;Hamse Kjerstadius;
+S;10;Strippung und saure Wäsche;Hamse Kjerstadius;
+B;1;Aufdoppelung WDVS;;SAKRET Europa
+B;2;Gipsrecycling;;UBA
+B;3;Baustoffbörse;bauteilbörse bremen;
+B;4;Recyclingbeton;SCHWENK Zement GmbH & Co. KG;
+B;5;Ausschreibungen;;Franziska Struck
+B;6;Gebäudepass-Altbau;;
+B;7;Gebäudepass-Neubau;Madaster Germany;
+E;1;Geothermieanlagen;EWZ, Erdwärme Grünwald;
+E;2;Solarthermieanlagen;badenova;
+E;3;Wärmepumpen;Ppntori, Reinraum, lizensiert durch CC0;
+E;4;Biomasseheizwerke;SW Merzig, PLV Energieholz;
+E;5;Blockheizkraftwerke;SW Bamberg, 2G;
+E;6;Photovoltaikanlagen;mrganso, sferrario1968, lizensiert durch Pixabay;
+E;7;Kleinwindkraftanlagen;NeoVenti;
+E;8;Kleinstwasserkraftanlagen;Richard Huber, Andreas Mühlbauer, lizensiert durch CC BY-SA 3.0;
+E;9;Smart Grids;Julia.Roesler, lizensiert durch CC BY-SA 4.0;
+E;10;Mieterstrommodelle;Avacon, SW Burg;
+E;11;Lokale Energiemärkte;Pebbles, WSW Wuppertaler SW;
+E;12;Wärmenetze;Björn Appel, Frank-m, lizensiert durch CC BY-SA 3.0;
+E;13;Anergienetze;BauGrund Süd;
+E;14;Energetische Gebäudesanierung;Energiesprong;
+E;15;Demand Response;;
+E;16;Wärmespeicher;N-ERGIE;
+E;17;Power-to-Gas;Manuel Gruber, Uniper, lizensiert durch CC BY-SA 4.0;
+E;18;Power-to-Heat;Vattenfall;
+E;19;Power-to-Mobility;AKrebs60, lizensiert durch Pixabay;
+E;20;Batteriespeicher;"Jelson25 lizensiert durch CC BY-SA 3.0; Asurnipal, lizensiert durch CC BY-SA 4.0";
